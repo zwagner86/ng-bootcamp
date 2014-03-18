@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" ng-app>
+<head>
+  <meta charset="utf-8">
+  <title>ng-bootcamp - Day 1</title>
+</head>
+<body ng-controller="MyController">
+  <h1>{{'Hello from AngularJS!'}}</h1>
+
+  <h2>Bindings</h2>
+  <div>Hello {{name}}!</div>
+
+  <h2>Scope Inheritance</h2>
+  <div ng-controller="ParentController">
+  	My name is {{parentName}}!
+  	<div ng-controller="ChildController">
+  		My name is {{childName}}!
+  	</div>
+  </div>
+
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="app/app.js"></script>
+</body>
+</html>

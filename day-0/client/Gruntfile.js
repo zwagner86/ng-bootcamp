@@ -1,4 +1,4 @@
-// Generated on 2014-03-12 using generator-angular 0.7.1
+// Generated on 2014-03-17 using generator-angular 0.7.1
 'use strict';
 
 // # Globbing
@@ -25,32 +25,8 @@ module.exports = function (grunt) {
       dist: 'dist'
     },
 
-    less: {
-      build: {
-        files: {
-          ".tmp/styles/app.css":"<%= yeoman.app %>/styles/app.less"
-        }
-      }
-    },
-
-    jade: {
-      build: {
-        files: { 
-          "app/views/myview.html":"app/views/myview.jade"
-        }
-      }
-    },
-
     // Watches files for changes and runs tasks based on the changed files
     watch: {
-      less: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
-        tasks: ['less']
-      },
-      jade: {
-        files: ['<%= yeoman.app %>/views/{,*/}*.jade'],
-        tasks: ['jade']
-      },
       js: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
         tasks: ['newer:jshint:all'],
@@ -301,22 +277,15 @@ module.exports = function (grunt) {
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
-        'copy:styles',
-        'less',
-        'jade'
+        'copy:styles'
       ],
       test: [
-        'copy:styles',
-        'less',
-        'jade'
+        'copy:styles'
       ],
       dist: [
         'copy:styles',
-        'less',
-        'jade',
         'imagemin',
-        'svgmin',
-        'less'
+        'svgmin'
       ]
     },
 

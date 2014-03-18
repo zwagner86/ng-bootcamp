@@ -1,0 +1,25 @@
+{
+  "name": "day-1",
+  "version": "0.0.0",
+  "homepage": "https://github.com/zwagner86/ng-bootcamp",
+  "authors": [
+    "zwagner86 <wagnerzachary@yahoo.com>"
+  ],
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.14",
+    "bootstrap": "~3.1.1"
+  }
+}
